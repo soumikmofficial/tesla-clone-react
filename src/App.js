@@ -1,8 +1,15 @@
 import React from "react";
 import "./App.css";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
 
 function App() {
-  return <div className="App">This is the component</div>;
+  return (
+    <>
+      {/* <Nav />; */}
+      <Home />
+    </>
+  );
 }
 
 export default App;

@@ -5,3 +5,5 @@
 - create Section Component
 - add styled wrapper to section component (height, width)
 - add ItemText component and ButtonGroup component as styled component and add styles
+
+-animate the down arrow
