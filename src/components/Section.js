@@ -5,7 +5,7 @@ function Section({ title, image, description, leftBtn, rightBtn }) {
   return (
     <Wrapper bgImg={image}>
       <ItemText>
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <p>{description}</p>
       </ItemText>
       <Buttons>
@@ -31,9 +31,13 @@ const Wrapper = styled.div`
 
 const ItemText = styled.section`
   text-align: center;
-  padding-top: 5rem;
-  h1 {
-    font-size: 2.5rem;
+  padding-top: 13rem;
+  h2 {
+    font-size: 4.5rem;
+    padding-bottom: 0.8rem;
+  }
+  p {
+    font-size: 1.7rem;
   }
 `;
 const Buttons = styled.section`
@@ -47,7 +51,7 @@ const ButtonGroup = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 2rem;
   width: 100%;
 `;
 
@@ -56,10 +60,10 @@ const LeftButton = styled.button`
   border-radius: 1.5rem;
   border: none;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: bold;
   opacity: 0.8;
-  padding: 0.8rem 0.5rem;
+  padding: 1.2rem 0rem;
   text-transform: uppercase;
   width: clamp(80px, 80%, 500px);
 
@@ -73,7 +77,7 @@ const RightButton = styled(LeftButton)`
 `;
 
 const DownArrow = styled.img`
-  margin-top: 2rem;
+  margin: 2rem 0 3rem;
   width: 3.5rem;
   animation: bounce infinite 1.5s;
   opacity: 0.5;

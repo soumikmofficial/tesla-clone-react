@@ -7,3 +7,5 @@
 - add ItemText component and ButtonGroup component as styled component and add styles
 
 -animate the down arrow
+
+- Header
