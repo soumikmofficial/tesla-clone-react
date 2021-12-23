@@ -17,6 +17,21 @@ function Home() {
           />
         );
       })}
+      <Section
+        title="Lowest Cost Solar Panels in America"
+        image="solar-panel.jpg"
+        description="Money-back gurantee"
+        leftBtn="Order Now"
+        rightBtn="Learn More"
+      />
+      <Section
+        title="Solar for New Roofs"
+        image="solar-roof.jpg"
+        description="Solar Roof Cost Less Than a New Roof"
+        leftBtn="Order Now"
+        rightBtn="Learn More"
+      />
+      <Section title="Accessories" image="accessories.jpg" leftBtn="Shop Now" />
     </Container>
   );
 }
