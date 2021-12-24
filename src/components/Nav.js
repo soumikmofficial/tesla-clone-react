@@ -29,14 +29,15 @@ function Nav() {
 }
 
 const Wrapper = styled.div`
+  align-items: center;
+  background: none;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
   padding: 0 5rem;
   position: fixed;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  height: 10vh;
-  background: none;
-  justify-content: space-between;
+  z-index: 10;
 `;
 const Logo = styled.div`
   cursor: pointer;

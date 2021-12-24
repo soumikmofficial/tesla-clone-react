@@ -35,6 +35,7 @@ function Sidebar() {
 }
 
 const Wrapper = styled.aside`
+  z-index: 100;
   background: white;
   display: flex;
   flex-direction: column;
