@@ -8,12 +8,12 @@ function Nav() {
         <img src="images/logo.svg" alt="tesla logo" />
       </Logo>
       <LeftButtons>
-        <a href="">model 3</a>
-        <a href="">model x</a>
-        <a href="">model s</a>
-        <a href="">model y</a>
-        <a href="">solar roof</a>
-        <a href="">solar panel</a>
+        <a href="#">model 3</a>
+        <a href="#">model x</a>
+        <a href="#">model s</a>
+        <a href="#">model y</a>
+        <a href="#">solar roof</a>
+        <a href="#">solar panel</a>
       </LeftButtons>
       <RightButtons>
         <a href="" className="hide">

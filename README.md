@@ -9,3 +9,4 @@
 -animate the down arrow
 
 - Header
+- work on react reveal

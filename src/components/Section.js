@@ -1,18 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function Section({ title, image, description, leftBtn, rightBtn }) {
   return (
     <Wrapper bgImg={image}>
-      <ItemText>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </ItemText>
+      <Fade clear big>
+        <ItemText>
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </ItemText>
+      </Fade>
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>{leftBtn}</LeftButton>
-          {rightBtn && <RightButton>{rightBtn}</RightButton>}
-        </ButtonGroup>
+        <Fade clear big>
+          <ButtonGroup>
+            <LeftButton>{leftBtn}</LeftButton>
+            {rightBtn && <RightButton>{rightBtn}</RightButton>}
+          </ButtonGroup>
+        </Fade>
         <DownArrow src="images/down-arrow.svg"></DownArrow>
       </Buttons>
     </Wrapper>
@@ -50,25 +55,27 @@ const Buttons = styled.section`
 const ButtonGroup = styled.section`
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 2rem;
-  width: 100%;
+  width: 100vw;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const LeftButton = styled.button`
   background: var(--bg-button);
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   border: none;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
   opacity: 0.8;
-  padding: 1.2rem 0rem;
+  padding: 1.5rem 0rem;
   text-transform: uppercase;
   width: clamp(80px, 80%, 500px);
 
   @media (min-width: 768px) {
-    width: clamp(150px, 80%, 300px);
+    width: clamp(150px, 80%, 250px);
   }
 `;
 const RightButton = styled(LeftButton)`
