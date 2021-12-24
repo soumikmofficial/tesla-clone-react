@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { openSidebar } from "../redux/appSlice";
+import { useDispatch } from "react-redux";
 
 function Nav() {
+  const dispatch = useDispatch();
+
   return (
     <Wrapper>
       <Logo>
@@ -22,7 +26,9 @@ function Nav() {
         <a href="" className="hide">
           Account
         </a>
-        <a href="">Menu</a>
+        <button href="" onClick={() => dispatch(openSidebar())}>
+          Menu
+        </button>
       </RightButtons>
     </Wrapper>
   );
@@ -63,13 +69,16 @@ const RightButtons = styled.div`
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  a {
+  a,
+  button {
     font-weight: 600;
     text-transform: capitalize;
     font-size: 1.4rem;
     padding: 0.3rem 0.5rem;
     border-radius: 0.5rem;
     background: var(--bg-secondary);
+    border: none;
+    cursor: pointer;
   }
   .hide {
     background: none;

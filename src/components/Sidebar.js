@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import CloseIcon from "@material-ui/icons/Close";
+import { closeSidebar } from "../redux/appSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function Sidebar() {
+  const dispatch = useDispatch();
+  const { isSidebarOpen } = useSelector((state) => state.app);
   return (
-    <Wrapper>
-      <CloseIcon className="close" />
+    <Wrapper sidebar={isSidebarOpen}>
+      <CloseIcon className="close" onClick={() => dispatch(closeSidebar())} />
       <li>
         <a href="#">existing inventory</a>
       </li>
@@ -35,6 +39,14 @@ function Sidebar() {
 }
 
 const Wrapper = styled.aside`
+  ${(props) => {
+    if (!props.sidebar) {
+      return `
+      transform: translateX(100%);
+      `;
+    }
+  }}
+  transition: transform 1s ease;
   z-index: 100;
   background: white;
   display: flex;
