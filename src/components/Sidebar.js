@@ -9,7 +9,9 @@ function Sidebar() {
   const { isSidebarOpen } = useSelector((state) => state.app);
   return (
     <Wrapper sidebar={isSidebarOpen}>
-      <CloseIcon className="close" onClick={() => dispatch(closeSidebar())} />
+      <CloseIconContainer>
+        <CloseIcon className="close" onClick={() => dispatch(closeSidebar())} />
+      </CloseIconContainer>
       <li>
         <a href="#">existing inventory</a>
       </li>
@@ -46,13 +48,13 @@ const Wrapper = styled.aside`
       `;
     }
   }}
-  transition: transform 1s ease;
+  transition: transform .8s ease;
   z-index: 100;
   background: white;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding: 4rem;
+  padding: 0 5rem;
   position: fixed;
   right: 0;
   top: 0;
@@ -64,14 +66,20 @@ const Wrapper = styled.aside`
     font-weight: 600;
     text-transform: capitalize;
     line-height: 2rem;
+    box-shadow: 0 1px 0 rgb(0, 0, 0, 0.2);
   }
 
   .close {
     font-size: 2.4rem;
-    margin-left: auto;
-    margin-bottom: 2rem;
     cursor: pointer;
   }
+`;
+
+const CloseIconContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
 `;
 
 export default Sidebar;

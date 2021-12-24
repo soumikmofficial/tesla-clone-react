@@ -74,6 +74,7 @@ const LeftButton = styled.button`
   padding: 1.5rem 0rem;
   text-transform: uppercase;
   width: clamp(80px, 80%, 500px);
+  cursor: pointer;
 
   @media (min-width: 768px) {
     width: clamp(150px, 80%, 250px);
