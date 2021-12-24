@@ -25,18 +25,19 @@ function Section({ title, image, description, leftBtn, rightBtn }) {
 }
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
   background: ${(props) => `url("images/${props.bgImg}")`} no-repeat center;
   background-size: cover;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: space-between;
+  padding: 0 0.5rem;
+  width: 100vw;
 `;
 
 const ItemText = styled.section`
-  text-align: center;
   padding-top: 13rem;
+  text-align: center;
   h2 {
     font-size: 4.5rem;
     padding-bottom: 0.8rem;

@@ -10,6 +10,16 @@ const carInfo = [
     peakPower: "1,020",
   },
   {
+    id: 3,
+    title: "Model Y",
+    description: "Order Online for Touchless Delivery",
+    image: "model-y.jpg",
+    range: "410",
+    time: "2.05",
+    topSpeed: "190",
+    peakPower: "1,040",
+  },
+  {
     id: 1,
     title: "Model 3",
     description: "Order Online for Touchless Delivery",
@@ -28,16 +38,6 @@ const carInfo = [
     time: "1.55",
     topSpeed: "150",
     peakPower: "1,130",
-  },
-  {
-    id: 3,
-    title: "Model Y",
-    description: "Order Online for Touchless Delivery",
-    image: "model-y.jpg",
-    range: "410",
-    time: "2.05",
-    topSpeed: "190",
-    peakPower: "1,040",
   },
 ];
 

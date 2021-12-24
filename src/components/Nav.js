@@ -50,7 +50,6 @@ const LeftButtons = styled.div`
   align-items: center;
   gap: 3rem;
   a {
-    text-decoration: none;
     font-weight: 600;
     text-transform: capitalize;
     font-size: 1.6rem;
@@ -64,7 +63,6 @@ const RightButtons = styled.div`
   align-items: center;
   gap: 2.5rem;
   a {
-    text-decoration: none;
     font-weight: 600;
     text-transform: capitalize;
     font-size: 1.4rem;
