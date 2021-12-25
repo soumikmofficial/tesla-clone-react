@@ -10,7 +10,9 @@ function Nav() {
   return (
     <Wrapper>
       <Logo>
-        <img src="images/logo.svg" alt="tesla logo" />
+        <a href="https://tesla-clone-21.netlify.app/">
+          <img src="images/logo.svg" alt="tesla logo" />
+        </a>
       </Logo>
       <LeftButtons>
         {products.map((product) => {
@@ -18,13 +20,13 @@ function Nav() {
         })}
       </LeftButtons>
       <RightButtons>
-        <a href="" className="hide">
+        <a href="#" className="hide">
           Shop
         </a>
-        <a href="" className="hide">
+        <a href="#" className="hide">
           Account
         </a>
-        <button href="" onClick={() => dispatch(openSidebar())}>
+        <button href="#" onClick={() => dispatch(openSidebar())}>
           Menu
         </button>
       </RightButtons>
