@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { openSidebar } from "../redux/appSlice";
 import { useDispatch } from "react-redux";
-import products from "../products";
+import { products } from "../products";
 
 function Nav() {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function Nav() {
       </Logo>
       <LeftButtons>
         {products.map((product) => {
-          return <a href={product.ref}>{product.name}</a>;
+          return <a href={`#${product.ref}`}>{product.name}</a>;
         })}
       </LeftButtons>
       <RightButtons>

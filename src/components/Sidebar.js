@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CloseIcon from "@material-ui/icons/Close";
 import { closeSidebar } from "../redux/appSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { sidebar } from "../products";
 
 function Sidebar() {
   const dispatch = useDispatch();
@@ -12,30 +13,14 @@ function Sidebar() {
       <CloseIconContainer>
         <CloseIcon className="close" onClick={() => dispatch(closeSidebar())} />
       </CloseIconContainer>
-      <li>
-        <a href="#">existing inventory</a>
-      </li>
-      <li>
-        <a href="#">used inventory</a>
-      </li>
-      <li>
-        <a href="#">trade-in</a>
-      </li>
-      <li>
-        <a href="#">test drive</a>
-      </li>
-      <li>
-        <a href="#">cybertruck</a>
-      </li>
-      <li>
-        <a href="#">roadster</a>
-      </li>
-      <li>
-        <a href="#">semi</a>
-      </li>
-      <li>
-        <a href="#">charging</a>
-      </li>
+      {sidebar.map((btn) => {
+        return (
+          <li>
+            <a href="#">{btn}</a>
+          </li>
+        );
+      })}
+      <p>&copy; 2021 Tesla Clone by Soumik</p>
     </Wrapper>
   );
 }
@@ -72,6 +57,10 @@ const Wrapper = styled.aside`
   .close {
     font-size: 2.4rem;
     cursor: pointer;
+  }
+
+  p {
+    margin: 5rem auto 0;
   }
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "./Section";
-import products from "../products";
+import { products } from "../products";
 
 function Home() {
   console.log(products);

@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 function Section({ props }) {
-  const { image, title, description, btn1, btn2 } = props;
+  const { image, title, description, btn1, btn2, ref } = props;
   return (
-    <Wrapper bgImg={image}>
+    <Wrapper bgImg={image} id={ref}>
       <Fade clear big>
         <ItemText>
           <h2>{title}</h2>

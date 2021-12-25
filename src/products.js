@@ -85,4 +85,15 @@ const products = [
   },
 ];
 
-export default products;
+const sidebar = [
+  "existing inventory",
+  "used inventory",
+  "trade-in",
+  "test drive",
+  "cybertruck",
+  "roadster",
+  "semi",
+  "charging",
+];
+
+export { products, sidebar };

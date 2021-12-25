@@ -1,12 +1,14 @@
-- create Header component and add to app.js
-- add basic styles to index.css(reset, font-family, color, and body 100%)
-- create and add Home component
-- install styled-components
-- create Section Component
-- add styled wrapper to section component (height, width)
-- add ItemText component and ButtonGroup component as styled component and add styles
+# Tesla Landing Page Clone
 
--animate the down arrow
+This is a landing page build mimicing the Tesla website.
 
-- Header
-- work on react reveal
+**Libraries and packages**:
+
+- React
+- Redux
+- Styled-components
+- React Reveal
+- and a few more
+
+_It can be rightly argued that use of redux was unnecessary, but the purpose was to test out the reduxjs-toolkit method._
+_The inspiration to build the site was from Clever Programmar_
