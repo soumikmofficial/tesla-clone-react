@@ -53,7 +53,6 @@ const Logo = styled.div`
 const LeftButtons = styled.div`
   display: flex;
   align-items: center;
-  /* gap: 3rem; */
   a {
     font-weight: 600;
     text-transform: capitalize;
@@ -65,7 +64,7 @@ const LeftButtons = styled.div`
   a:hover {
     background: var(--bg-secondary);
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;

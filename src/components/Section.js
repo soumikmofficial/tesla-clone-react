@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 0.5rem;
   width: 100vw;
+  scroll-snap-align: start;
 `;
 
 const ItemText = styled.section`
