@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
-function Section({ title, image, description, leftBtn, rightBtn }) {
+function Section({ props }) {
+  const { image, title, description, btn1, btn2 } = props;
   return (
     <Wrapper bgImg={image}>
       <Fade clear big>
@@ -14,8 +15,8 @@ function Section({ title, image, description, leftBtn, rightBtn }) {
       <Buttons>
         <Fade clear big>
           <ButtonGroup>
-            <LeftButton>{leftBtn}</LeftButton>
-            {rightBtn && <RightButton>{rightBtn}</RightButton>}
+            <LeftButton>{btn1}</LeftButton>
+            {btn2 && <RightButton>{btn2}</RightButton>}
           </ButtonGroup>
         </Fade>
         <DownArrow src="images/down-arrow.svg"></DownArrow>

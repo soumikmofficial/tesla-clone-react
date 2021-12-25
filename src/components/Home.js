@@ -1,37 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "./Section";
-import carInfo from "../carInfo";
+import products from "../products";
 
 function Home() {
+  console.log(products);
   return (
     <Container>
-      {carInfo.map((car) => {
-        const { id } = car;
-        return (
-          <Section
-            key={id}
-            {...car}
-            leftBtn="custom order"
-            rightBtn="existing inventory"
-          />
-        );
+      {products.map((product) => {
+        console.log(product.title);
+        return <Section key={product.id} props={product}></Section>;
       })}
-      <Section
-        title="Lowest Cost Solar Panels in America"
-        image="solar-panel.jpg"
-        description="Money-back gurantee"
-        leftBtn="Order Now"
-        rightBtn="Learn More"
-      />
-      <Section
-        title="Solar for New Roofs"
-        image="solar-roof.jpg"
-        description="Solar Roof Cost Less Than a New Roof"
-        leftBtn="Order Now"
-        rightBtn="Learn More"
-      />
-      <Section title="Accessories" image="accessories.jpg" leftBtn="Shop Now" />
     </Container>
   );
 }

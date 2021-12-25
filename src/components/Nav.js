@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { openSidebar } from "../redux/appSlice";
 import { useDispatch } from "react-redux";
+import products from "../products";
 
 function Nav() {
   const dispatch = useDispatch();
@@ -12,12 +13,9 @@ function Nav() {
         <img src="images/logo.svg" alt="tesla logo" />
       </Logo>
       <LeftButtons>
-        <a href="#">model 3</a>
-        <a href="#">model x</a>
-        <a href="#">model s</a>
-        <a href="#">model y</a>
-        <a href="#">solar roof</a>
-        <a href="#">solar panel</a>
+        {products.map((product) => {
+          return <a href={product.ref}>{product.name}</a>;
+        })}
       </LeftButtons>
       <RightButtons>
         <a href="" className="hide">
@@ -55,11 +53,17 @@ const Logo = styled.div`
 const LeftButtons = styled.div`
   display: flex;
   align-items: center;
-  gap: 3rem;
+  /* gap: 3rem; */
   a {
     font-weight: 600;
     text-transform: capitalize;
     font-size: 1.6rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+  }
+  a:hover {
+    background: var(--bg-secondary);
   }
   @media (max-width: 768px) {
     display: none;
